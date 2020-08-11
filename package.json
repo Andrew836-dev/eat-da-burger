@@ -1,0 +1,24 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "Full stack app to log burger varieties",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrew836-dev/eat-da-burger.git"
+  },
+  "author": "Andrew Gray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andrew836-dev/eat-da-burger/issues"
+  },
+  "homepage": "https://github.com/Andrew836-dev/eat-da-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}

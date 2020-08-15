@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         let burger = $("input").val().trim().slice(0,45);
         if (burger) {
-            $.ajax("api/burgers/", {
+            $.ajax("api/burgers", {
                 method: "POST",
                 data: {
                     burger_name: burger

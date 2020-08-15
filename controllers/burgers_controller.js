@@ -16,7 +16,7 @@ router.get("/", function (req, res) {
     }
 });
 
-router.get("/api/burgers/", function (req, res) {
+router.get("/api/burgers", function (req, res) {
     try {
         burger.all(function (data) {
             console.log(data);
@@ -29,7 +29,7 @@ router.get("/api/burgers/", function (req, res) {
     }
 });
 
-router.post("/api/burgers/", function (req, res) {
+router.post("/api/burgers", function (req, res) {
     let newBurger = req.body;
     try {
         burger.insert(newBurger, function (data) {

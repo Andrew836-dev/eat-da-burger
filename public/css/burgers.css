@@ -1,0 +1,12 @@
+.list-container {
+    background-color: rebeccapurple;
+}
+#edible {
+    background-color: orange;
+    min-height: 2rem;
+}
+
+#devoured {
+    background-color: plum;
+    min-height: 2rem;
+}

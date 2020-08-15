@@ -61,8 +61,8 @@ router.put("/api/burgers/:id", function (req, res) {
     }
 });
 
-router.delete("/api/burgers", function (req, res) {
-    let id = req.body.id;
+router.delete("/api/burgers/:id", function (req, res) {
+    let id = req.params.id;
     try {
         burger.delete(id, function (data) {
             // console.log(data);

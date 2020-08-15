@@ -6,7 +6,7 @@ Full stack app using handlebars, express and MySQL. Functions like a one way tod
 ## Usage
 [Deployed site](https://andrew-burger.herokuapp.com/)
 
-A burger name can be typed into the "Add burger" field. When the add burger button is clicked, the name is posted to the SQL database and the page will refresh. New burgers appear on the left of the screen with a button to let you eat them. Eaten burgers will be moved to the right list where they will remain for all eternity. At this stage there's no way to regurgitate a burger.
+A burger name can be typed into the "Add burger" field. When the add burger button is clicked, the name is posted to the SQL database and the page will refresh. New burgers appear on the left of the screen with a button to let you eat them. Eaten burgers will be moved to the right list where they will remain until thrown in the trash.
 ## License
 This project uses a MIT license.
 

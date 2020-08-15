@@ -6,4 +6,10 @@
     {{/unless}}
 
     {{ burger_name }}
+
+    {{#if devoured}}
+    <button class="remove-burger" data-id="{{id}}">
+        <i class="fas fa-trash"></i>
+    </button>
+    {{/if}}
 </li>

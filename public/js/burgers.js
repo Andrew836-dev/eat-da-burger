@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    $(".remove-burger").on("click", function () {
+        let id = $(this).data("id");
+        $.ajax("api/burgers/" + id, {
+            method: "DELETE"
+        }).then(() => {
+            location.reload();
+        })
+    })
+
     $("form").on("submit", function(event) {
         event.preventDefault();
         let burger = $("input").val().trim().slice(0,45);

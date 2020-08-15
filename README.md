@@ -1,4 +1,4 @@
-# Eat da burger
+# Eat at Burggies
 ## Description
 Full stack app using handlebars, express and MySQL. Functions like a one way todo list.  
 ![License badge](https://img.shields.io/badge/license-MIT-green)

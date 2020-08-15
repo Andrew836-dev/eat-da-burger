@@ -1,12 +1,23 @@
+body {
+    background-color: whitesmoke;
+}
 .list-container {
-    background-color: rebeccapurple;
+    max-width: 100%;
+}
+ul {
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px 0px rgb(114, 114, 114), -1px -1px 4px 1px white;
+}
+button {
+    border-width: 1px;
+    border-radius: 0.7rem;
 }
 #edible {
-    background-color: orange;
-    min-height: 2rem;
+    background-color: rgba(255, 166, 0, 0.253);
+    min-height: 1.5rem;
 }
 
 #devoured {
-    background-color: plum;
-    min-height: 2rem;
+    background-color: rgba(221, 160, 221, 0.253);
+    min-height: 1.5rem;
 }

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     $("form").on("submit", function(event) {
         event.preventDefault();
-        let burger = $("input").val().trim();
+        let burger = $("input").val().trim().slice(0,45);
         if (burger) {
             $.ajax("api/burgers/", {
                 method: "POST",

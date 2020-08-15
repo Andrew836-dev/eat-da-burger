@@ -20,7 +20,7 @@ router.get("/api/burgers", function (req, res) {
     try {
         burger.all(function (data) {
             console.log(data);
-            res.send(data);
+            res.json(data);
         });
     }
     catch (error) {
@@ -34,7 +34,7 @@ router.post("/api/burgers", function (req, res) {
     try {
         burger.insert(newBurger, function (data) {
             console.log(data);
-            res.send("That's a post request");
+            res.json(data);
         });
     }
     catch (error) {

@@ -4,8 +4,16 @@ const burger = require("../models/burger");
 const router = express.Router();
 
 router.get("/", function (req, res) {
-    // res.render("index", funct)
-    res.send("This should be a html page");
+    try {
+        burger.all(function (data) {
+            console.log(data);
+            res.render("index", { burgers: data });
+        });
+    }
+    catch (error) {
+        console.log(error);
+        res.status(500).end();
+    }
 });
 
 router.get("/api/burgers", function (req, res) {
@@ -22,7 +30,7 @@ router.get("/api/burgers", function (req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
-    let newBurger = req.body.burger;
+    let newBurger = req.body;
     try {
         burger.insert(newBurger, function (data) {
             console.log(data);
@@ -35,11 +43,11 @@ router.post("/api/burgers", function (req, res) {
     }
 });
 
-router.put("/api/burgers", function (req, res) {
-    let updatedBurger = req.body.burger;
-    let id = req.body.id;
+router.put("/api/burgers/:id", function (req, res) {
+    console.log(req.body);
+    let id = req.params.id;
     try {
-        burger.update(updatedBurger, id, function (data) {
+        burger.update(req.body, id, function (data) {
             // console.log(data);
             if (data.changedRows === 0) {
                 return res.status(404).end();

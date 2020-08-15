@@ -17,6 +17,7 @@ const orm = {
     },
     updateOne: function (table, object, id, cb) {
         let query = "UPDATE ?? SET ? WHERE ?";
+        console.log(query, [table, object, {id: id}])
         connection.query(query, [table, object, { id: id }], function (err, data) {
             if (err) throw err;
             else cb(data);

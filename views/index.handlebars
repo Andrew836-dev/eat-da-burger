@@ -1,34 +1,36 @@
-<h1 class="title has-text-centered"> Eat at Burggies! </h1>
-<div class="columns is-mobile is-variable is-1 list-container">
-    <div class="column is-half">
-        <ul id="edible" class="ml-2 pl-1">
-            {{#each burgers}}
+<h1 class="title has-text-centered is-size-1-tablet"> Eat at Burggies! </h1>
+<div class="container">
+    <div class="columns is-mobile is-variable is-1 list-container is-size-3-tablet">
+        <div class="column is-half">
+            <ul id="edible" class="ml-2 pl-1">
+                {{#each burgers}}
                 {{#unless devoured}}
-                    {{> burgers/burger_block devoured=false}}
+                {{> burgers/burger_block devoured=false}}
                 {{/unless}}
-            {{/each}}
-        </ul>
-    </div>
-    <div class="column is-half">
-        <ul id="devoured" class="has-text-right mr-1 pr-1">
-            {{#each burgers}}
-                {{#if devoured}}
-                    {{> burgers/burger_block devoured = true }}
-                {{/if}}
-            {{/each}}
-        </ul>
-    </div>
-</div>
-<div class="container has-text-centered">
-<h2 class="subtitle">Add a Burger</h2>
-    <form>
-        <div>
-            <span class="is-icon">
-                <i class="fas fa-hamburger"></i>
-            </span>
-            <label for="burgie">Burger Name:</label>
-            <input type="text" id="burgie" name="burger_name">
+                {{/each}}
+            </ul>
         </div>
-        <button type="submit">Add Burger</button>
-    </form>
+        <div class="column is-half">
+            <ul id="devoured" class="has-text-right mr-1 pr-1">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger_block devoured = true }}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="container has-text-centered is-size-3-tablet">
+        <h2 class="subtitle is-size-1-tablet">Add a Burger</h2>
+        <form>
+            <div>
+                <span class="is-icon">
+                    <i class="fas fa-hamburger"></i>
+                </span>
+                <label for="burgie">Burger Name:</label>
+                <input type="text" id="burgie" name="burger_name" class="is-size-3-tablet">
+            </div>
+            <button type="submit" class="is-size-3-tablet">Add Burger</button>
+        </form>
+    </div>
 </div>
